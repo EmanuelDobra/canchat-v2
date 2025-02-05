@@ -16,14 +16,14 @@ const config = {
 			fallback: 'index.html'
 		})
 	},
-	vitePlugin: {
-		inspector: {
-			toggleKeyCombo: 'meta-shift', // Key combination to open the inspector
-			holdMode: false, // Enable or disable hold mode
-			showToggleButton: 'always', // Show toggle button ('always', 'active', 'never')
-			toggleButtonPos: 'bottom-right' // Position of the toggle button
-		}
-	},
+	// vitePlugin: {
+	// 	inspector: {
+	// 		toggleKeyCombo: 'meta-shift', // Key combination to open the inspector
+	// 		holdMode: false, // Enable or disable hold mode
+	// 		showToggleButton: 'always', // Show toggle button ('always', 'active', 'never')
+	// 		toggleButtonPos: 'bottom-right' // Position of the toggle button
+	// 	}
+	// },
 	onwarn: (warning, handler) => {
 		const { code } = warning;
 		if (code === 'css-unused-selector') return;
