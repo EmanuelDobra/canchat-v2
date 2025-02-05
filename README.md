@@ -19,6 +19,26 @@
   - Run backend `cd backend` & `sh dev.sh`
   - Connect at http://localhost:5173/
 
+## CORS Error
+Navigate to `canchat-v2/backend/open_webui/main.py` and change cors origins to the following:
+```python
+origins = [
+    "http://localhost:5173"
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    # allow_origins=CORS_ALLOW_ORIGIN,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+```
+
+Then you should be able to remove the code, and it should still work. 
+
+
 # Windows Docker-Desktop Setup
 1. Install Docker Desktop
 2. Make sure your `run.sh` file has the correct env setup `--env-file ./.env \`  
