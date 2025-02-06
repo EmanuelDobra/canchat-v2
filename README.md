@@ -43,6 +43,14 @@ git remote show origin
 git remote add origin git@ssh.dev.azure.com:v3/CMP-CPM/AI%20Prototypes/canchat-v2
 git remote rm origin
 git remote add origin git@github.com:EmanuelDobra/canchat-v2.git
+git remote add upstream git@github.com:ssc-dsai/canchat-v2.git
+git fetch upstream
+git rebase upstream/main
+
+# Then push back to azure
+git remote rm origin
+git remote add origin git@ssh.dev.azure.com:v3/CMP-CPM/AI%20Prototypes/canchat-v2
+git push --set-upstream origin main
 ```
 
 # Windows Docker-Desktop Setup
