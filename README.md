@@ -1,4 +1,3 @@
-
 # Windows Dev Setup
 1. Install Ubuntu from store (or whatever OS you prefer)
 2. From Ubuntu terminal:
@@ -38,6 +37,13 @@ app.add_middleware(
 
 Then you should be able to remove the code, and it should still work. 
 
+## Pull Code Fromm SSC
+```bash
+git remote show origin
+git remote add origin git@ssh.dev.azure.com:v3/CMP-CPM/AI%20Prototypes/canchat-v2
+git remote rm origin
+git remote add origin git@github.com:EmanuelDobra/canchat-v2.git
+```
 
 # Windows Docker-Desktop Setup
 1. Install Docker Desktop
